@@ -4,7 +4,7 @@ using FlyweightPatternExample.Objects;
 
 namespace FlyweightPatternExample.Factories
 {
-    public static class CharacterFactory
+    public static class CharacterClassFactory
     {
         private static readonly Dictionary<string, CharacterClass> FlyWeights = new();
 
@@ -18,8 +18,8 @@ namespace FlyweightPatternExample.Factories
 
             CharacterClass characterClass = key switch
             {
-                "Fighter" => new FighterClass { Name = "Boris", Race = "Dragonborn" },
-                "Wizard" => new WizardClass { Name = "Luke", Race = "Half-Elf" },
+                "Fighter" => new FighterClass(),
+                "Wizard" => new WizardClass(),
                 _ => throw new NotSupportedException("Incompatible input detected!")
             };
 

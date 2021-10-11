@@ -2,15 +2,16 @@
 
 namespace FlyweightPatternExample.Objects
 {
-    public class FighterCharacter : Character
+    public class FighterClass : CharacterClass
     {
-        public static int _fighterCharacterCount;
-        
+        public static int FighterClassCount { get; private set; }
+        public override string Name => "Fighter";
 
-        public FighterCharacter()
+
+        public FighterClass()
         {
-            _fighterCharacterCount++;
-            Class = "Fighter";
+            FighterClassCount++;
+            
         }
 
         public override void PrintCharacterSkills()

@@ -1,10 +1,8 @@
 ﻿namespace FlyweightPatternExample.Objects
 {
-    public abstract class Character
+    public abstract class CharacterClass
     {
-        public string Name { get; set; }
-        public string Race { get; set; }
-        public string Class { get; set; }
+        public abstract string Name { get; }
 
         public abstract void PrintCharacterSkills();
     }

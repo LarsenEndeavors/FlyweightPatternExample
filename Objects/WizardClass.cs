@@ -2,14 +2,14 @@
 
 namespace FlyweightPatternExample.Objects
 {
-    public class WizardCharacter : Character
+    public class WizardClass : CharacterClass
     {
-        public static int _wizardCharacterCount;
+        public static int WizardCharacterCount { get; private set; }
+        public override string Name => "Wizard";
 
-        public WizardCharacter()
+        public WizardClass()
         {
-            _wizardCharacterCount++;
-            Class = "Wizard";
+            WizardCharacterCount++;
         }
 
         public override void PrintCharacterSkills()
